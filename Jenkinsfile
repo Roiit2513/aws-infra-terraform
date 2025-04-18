@@ -13,12 +13,6 @@ pipeline {
             }
         }
 
-        stage('Terraform Clean') {
-            steps {
-                sh 'rm -rf .terraform'
-            }
-        }
-
         stage('Terraform Init') {
             steps {
                 sh 'terraform init'
